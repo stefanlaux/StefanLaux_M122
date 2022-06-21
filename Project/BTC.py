@@ -1,10 +1,12 @@
 import json
+import optparse
 import requests
 
 
+
 def main():
-    price, name, history = apiRequest()
-    htmlDocument(name, price, history)    
+    price, name, history, percentage = apiRequest()
+    htmlDocument(name, price, history, percentage)    
 
 
 def apiRequest():
@@ -13,29 +15,25 @@ def apiRequest():
     price = nowRequest["bitcoin"]["chf"]
     name = "Bitcoin"
     history = int(historyRequest["prices"][0][1])
-    return price, name, history
+    percentage = (price - history) / history * 100
+    return str(price), str(name), str(history), percentage
 
 
-def htmlDocument(name, price, history):
-    html = """
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <link rel="stylesheet" href="./Project/index.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Bitcoin</title>
-    </head>
-    <body>
-        <h1>{}</h1>
-        <h4>Price now: {}CHF</h4>
-        <h4>7 Days Ago: {}CHF</h4>
-    </body>
-    </html>
-    """.format(name, price, history)
-    file = open("index.html", "w")
-    file.write(html)
-    file.close()
+def htmlDocument(name, price, history, percentage):
+  
+    percentage = str((round(percentage, 2))) + "%"
 
+    htmlData = [name, price, history, percentage ]
+
+    with open('./Project/index.txt', 'r') as file :
+        filedata = file.read()
+
+    for i in range(len(htmlData)):
+        filedata = filedata.replace('{', htmlData[i], 1)
+        print(htmlData[i])
+         
+    with open('./Project/mail.html', 'w') as file:
+        file.write(filedata)
+
+   
 main()
