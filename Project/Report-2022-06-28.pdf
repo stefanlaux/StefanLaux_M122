@@ -32,7 +32,7 @@ endobj
 endobj
 6 0 obj
 <<
-/Author () /CreationDate (D:20220628143917-01'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20220628143917-01'00') /Producer (xhtml2pdf <https://github.com/xhtml2pdf/xhtml2pdf/>) 
+/Author () /CreationDate (D:20220628152022-01'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20220628152022-01'00') /Producer (xhtml2pdf <https://github.com/xhtml2pdf/xhtml2pdf/>) 
   /Subject () /Title (Bitcoin) /Trapped /False
 >>
 endobj
@@ -48,17 +48,17 @@ endobj
 endobj
 9 0 obj
 <<
-/Count -1 /Dest [ 4 0 R /Fit ] /First 10 0 R /Last 10 0 R /Parent 8 0 R /Title (Price now: 20120CHF)
+/Count -1 /Dest [ 4 0 R /Fit ] /First 10 0 R /Last 10 0 R /Parent 8 0 R /Title (Price now: 20109CHF)
 >>
 endobj
 10 0 obj
 <<
-/Count -3 /Dest [ 4 0 R /Fit ] /First 11 0 R /Last 13 0 R /Parent 9 0 R /Title (Price now: 20120CHF)
+/Count -3 /Dest [ 4 0 R /Fit ] /First 11 0 R /Last 13 0 R /Parent 9 0 R /Title (Price now: 20109CHF)
 >>
 endobj
 11 0 obj
 <<
-/Dest [ 4 0 R /Fit ] /Next 12 0 R /Parent 10 0 R /Title (Price now: 20120CHF)
+/Dest [ 4 0 R /Fit ] /Next 12 0 R /Parent 10 0 R /Title (Price now: 20109CHF)
 >>
 endobj
 12 0 obj
@@ -68,7 +68,7 @@ endobj
 endobj
 13 0 obj
 <<
-/Dest [ 4 0 R /Fit ] /Parent 10 0 R /Prev 12 0 R /Title (Change: 0.62%)
+/Dest [ 4 0 R /Fit ] /Parent 10 0 R /Prev 12 0 R /Title (Change: 0.56%)
 >>
 endobj
 14 0 obj
@@ -78,10 +78,10 @@ endobj
 endobj
 15 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 446
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 445
 >>
 stream
-Gatn"gM4Sj&;KZF'`Un$'c_Gk1`Pn`Xn8>((%ME8276hf[NL"qNi?_`92S!@*$@%Ek5V_q(gUC=kA+I)?nc#n7BluBngGQ!?Y"*.<"D/lgI0=W+!Gp&4Bg=mqXK#ObH.`0JkHf@'sQneD8:=GAZnI1o`$i(?mqmW+CkodcYu2=SFp8:Q_Yd%/hYh1?)D]7:D>_*ees6Ph6IHHB5fh(U8\>1]<A;U)V3DR>N0t9qNu2%eI@C;'Ku*##aI-H,>A,7,*m?!GXRC`1OM.kUoanJ+[g13863c3=CX[VgZSEE67BfLCM4::)OO\5qJj+BT=1fr!nCmAK^-$Yr%MhjF>ucr"K!<.F^^!:O03VfQstN)MM?)%$GkQbo,Y=%AdH]R>WOJuTVF-h>e9F=n/@iD[P!0\\"0u_)TE(A`\4Zu>R[=@K=u"WF9ilraM%XQ'Bj'~>endstream
+Gatn!h.jel&4Z-[']2WY'c_GkDg&gp[aL(?<6,H'<GOms[NL"qNi?_`92S!@A-85[RI=Z(7Mf/#kmA8lk`$Eq;9m"L4N^1LQc3/`er('h2NdUY7n=,SULihp?LQKh;66h0i"C`S"Y@6k%G8r[n$GWEmb_Uq%)nG76Ip,F$lAQX=V#+b8SSlLEQKQo$D!Z9U9GfLc8_&hL1O1FK>V+1:":39I:\,]YbkUY"g/*RO6L8e^-VRPZ@d$6TeaVfK^h9!`0*k6O!o!iL(C25Zk\-;KW'kCam.LcX%eCiqcpm0#c/@f%5m-L"&n5FIni**drmaB@D1@eU&%J)5)^Br/^@30JLSZO?!&9=UMF*[VO5\,;%l]$+h4"h^>jCAl%='&dW3_:*He(<dY6#$fB=cjE=n^imC\'K1JY//I$q&PZT\eOGh$J@&R$)LHi[_5k]$~>endstream
 endobj
 xref
 0 16
@@ -104,7 +104,7 @@ xref
 trailer
 <<
 /ID 
-[<0d8fb4cda22f26d80887e6e28263e0e1><0d8fb4cda22f26d80887e6e28263e0e1>]
+[<d0762341391a03370d4c24ac3756973f><d0762341391a03370d4c24ac3756973f>]
 % ReportLab generated PDF document -- digest (http://www.reportlab.com)
 
 /Info 6 0 R
@@ -112,5 +112,5 @@ trailer
 /Size 16
 >>
 startxref
-2211
+2210
 %%EOF

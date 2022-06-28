@@ -13,7 +13,7 @@ def main():
     price, name, history, percentage = apiRequest()
     data = htmlDocument(name, price, history, percentage)
     name = convertHTMLtoPDF(data)
-
+    
 
 
 def apiRequest():
