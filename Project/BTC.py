@@ -32,19 +32,19 @@ def htmlDocument(name, price, history, percentage):
 
     htmlData = [name, price, history, percentage ]
 
-    with open('./Project/index.html', 'r') as file :
+    with open('./index.html', 'r') as file :
         filedata = file.read()
 
     for i in range(len(htmlData)):
         filedata = filedata.replace('[', htmlData[i], 1)
          
-    with open('./Project/mail.html', 'w') as file:
+    with open('./mail.html', 'w') as file:
         file.write(filedata)
     return filedata
 
 def convertHTMLtoPDF(sourceHtml):
         localDate = str(datetime.now()).split(" ")
-        name = "./Project/Report-{}.pdf".format(localDate[0])
+        name = "./Report-{}.pdf".format(localDate[0])
         resultFile = open(name, "w+b")
 
         pisa.CreatePDF(
