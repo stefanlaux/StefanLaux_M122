@@ -1,12 +1,19 @@
 import json
 import optparse
+import os
+from threading import local
 import requests
+from xhtml2pdf import pisa
+from datetime import datetime
+from decouple import config
 
 
 
 def main():
     price, name, history, percentage = apiRequest()
-    htmlDocument(name, price, history, percentage)    
+    data = htmlDocument(name, price, history, percentage)
+    name = convertHTMLtoPDF(data)
+
 
 
 def apiRequest():
@@ -25,15 +32,29 @@ def htmlDocument(name, price, history, percentage):
 
     htmlData = [name, price, history, percentage ]
 
-    with open('./Project/index.txt', 'r') as file :
+    with open('./Project/index.html', 'r') as file :
         filedata = file.read()
 
     for i in range(len(htmlData)):
-        filedata = filedata.replace('{', htmlData[i], 1)
-        print(htmlData[i])
+        filedata = filedata.replace('[', htmlData[i], 1)
          
     with open('./Project/mail.html', 'w') as file:
         file.write(filedata)
+    return filedata
 
+def convertHTMLtoPDF(sourceHtml):
+        localDate = str(datetime.now()).split(" ")
+        name = "./Project/Report-{}.pdf".format(localDate[0])
+        resultFile = open(name, "w+b")
+
+        pisa.CreatePDF(
+            sourceHtml,                
+            dest=resultFile)           
+
+        resultFile.close()
    
+       
+        return name
+
+        
 main()
