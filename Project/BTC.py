@@ -6,6 +6,7 @@ import requests
 from xhtml2pdf import pisa
 from datetime import datetime
 from decouple import config
+import yagmail
 
 
 
@@ -13,6 +14,7 @@ def main():
     price, name, history, percentage = apiRequest()
     data = htmlDocument(name, price, history, percentage)
     name = convertHTMLtoPDF(data)
+    sendMail(name)
     
 
 
@@ -43,18 +45,28 @@ def htmlDocument(name, price, history, percentage):
     return filedata
 
 def convertHTMLtoPDF(sourceHtml):
-        localDate = str(datetime.now()).split(" ")
-        name = "./Report-{}.pdf".format(localDate[0])
-        resultFile = open(name, "w+b")
+    localDate = str(datetime.now()).split(" ")
+    name = "./Report-{}.pdf".format(localDate[0])
+    resultFile = open(name, "w+b")
 
-        pisa.CreatePDF(
-            sourceHtml,                
-            dest=resultFile)           
+    pisa.CreatePDF(
+        sourceHtml,                
+        dest=resultFile)           
 
-        resultFile.close()
+    resultFile.close()
    
-       
-        return name
+    return name
 
+def sendMail(name):
+    user = config('mail')
+    app_password = config('app_password')
+    to = 'stefan.laux007@icloud.com'
+
+    subject = 'Bitcoin report'
+    content = ['Here is your weekly report!!', name]
+
+    with yagmail.SMTP(user, app_password) as yag:
+        yag.send(to, subject, content)
         
+
 main()
