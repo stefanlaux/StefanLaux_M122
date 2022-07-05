@@ -1,2 +1,1 @@
-
-    return str(price), str(name), str(history), percentage
+t(user)
