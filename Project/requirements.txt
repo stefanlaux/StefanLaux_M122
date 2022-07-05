@@ -1,0 +1,4 @@
+python-dotenv==0.20.0
+requests==2.26.0
+xhtml2pdf==0.2.8
+yagmail==0.15.277
