@@ -74,8 +74,11 @@ def sendMail(name):
     subject = 'Bitcoin report'
     content = ['Here is your weekly report!!', name]
 
-    with yagmail.SMTP(MAIL, PASSWORD) as yag:
-        yag.send(to, subject, content)
+    try:
+        with yagmail.SMTP(MAIL, PASSWORD) as yag:
+            yag.send(to, subject, content)
+    except Exception as error:
+        print(error)
     log("Mail send successful")
     
 def sendFTP(name):

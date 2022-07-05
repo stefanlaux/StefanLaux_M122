@@ -34,3 +34,9 @@ This is a logfile for the programm BTC.py
 [2022-07-05]  Mail send successful
 [2022-07-05]  FTP Sucessfully uploaded
 [2022-07-05]  -------------------------------
+[2022-07-05]  API Request successful
+[2022-07-05]  Generated HTML File
+[2022-07-05]  HTML File converted to PDF
+[2022-07-05]  Mail send successful
+[2022-07-05]  FTP Sucessfully uploaded
+[2022-07-05]  -------------------------------
