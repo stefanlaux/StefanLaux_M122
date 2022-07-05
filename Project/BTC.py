@@ -70,13 +70,12 @@ def convertHTMLtoPDF(sourceHtml):
 
 def sendMail(name):
     to = 'stefan.laux007@icloud.com'
-
     subject = 'Bitcoin report'
-    content = ['Here is your weekly report!!', name]
+    content = 'Here is your weekly report!!'
 
     try:
-        with yagmail.SMTP(MAIL, PASSWORD) as yag:
-            yag.send(to, subject, content)
+        yag = yagmail.SMTP(MAIL, PASSWORD)
+        yag.send(to, subject, content, name)
     except Exception as error:
         print(error)
     log("Mail send successful")
