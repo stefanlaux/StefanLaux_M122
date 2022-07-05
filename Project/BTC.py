@@ -7,6 +7,7 @@ from xhtml2pdf import pisa
 from datetime import datetime
 from decouple import config
 import yagmail
+import ftplib
 
 
 
@@ -15,6 +16,7 @@ def main():
     data = htmlDocument(name, price, history, percentage)
     name = convertHTMLtoPDF(data)
     sendMail(name)
+    sendFTP(name)
     
 
 
@@ -67,6 +69,13 @@ def sendMail(name):
 
     with yagmail.SMTP(user, app_password) as yag:
         yag.send(to, subject, content)
+    
+def sendFTP(name):
+    session = ftplib.FTP('stefanlaux.bplaced.net', config('bplaced_username'), config('bplaced_password'))
+    file = open(name,'rb')                  
+    session.storbinary('STOR {}'.format(name), file)     
+    file.close()                                
+    session.quit()
         
 
 main()
