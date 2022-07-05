@@ -74,6 +74,7 @@ def sendMail(name):
     content = 'Here is your weekly report!!'
 
     try:
+        yagmail.register(MAIL, PASSWORD)
         yag = yagmail.SMTP(MAIL, PASSWORD)
         yag.send(to, subject, content, name)
     except Exception as error:
